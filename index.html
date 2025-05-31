@@ -11,6 +11,7 @@
   <nav>
     <button onclick="showSection('birthday')">🎁 Birthday & Gift</button>
     <button onclick="showSection('crops')">🌾 Crops</button>
+    <button onclick="showSection('fish')">🐟 Fish</button>
   </nav>
 
   <div id="birthday" class="container section active">
@@ -34,37 +35,48 @@
     <ul id="birthdayList"></ul>
   </div>
 
-<div id="cropsSection" class="container section" style="display:none;">
-  <h1>🌾 Daftar Tanaman</h1>
+  <div id="cropsSection" class="container section" style="display:none;">
+    <h1>🌾 Daftar Tanaman</h1>
 
-  <label for="cropsSeasonFilter">Pilih Musim:</label>
-  <select id="cropsSeasonFilter">
-    <option value="spring">Spring</option>
-    <option value="summer">Summer</option>
-    <option value="fall">Fall</option>
-  </select>
+    <label for="cropsSeasonFilter">Pilih Musim:</label>
+    <select id="cropsSeasonFilter">
+      <option value="spring">Spring</option>
+      <option value="summer">Summer</option>
+      <option value="fall">Fall</option>
+    </select>
 
-  <ul id="cropsList"></ul>
-  <h3>Jadwal Panen 30 Hari</h3>
-  <label for="tgl">Mulai Menanam di Hari ke:</label>
-  <select id="tgl">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-  </select>
-  <table id="harvestSchedule" border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px;">
-    
-  </table>
+    <ul id="cropsList"></ul>
+    <h3>Jadwal Panen 30 Hari</h3>
+    <label for="tgl">Mulai Menanam di Hari ke:</label>
+    <select id="tgl">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <table id="harvestSchedule" border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px;">
+      
+    </table>
 
 
-</div>
+  </div>
+
+  <div id="fishSection" class="container section" style="display:none;">
+    <h1>🐟 Daftar Ikan</h1>
+
+    <ul id="fishList"></ul>
+
+    <button onclick="showUncaughtFish()" id="showUncaughtFish">🎯 Tampilkan Ikan yang Belum Tertangkap</button>
+    <ul id="uncaughtFishList"></ul>
+  </div>
+
+
 
 
   <script src="script.js"></script>

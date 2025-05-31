@@ -116,6 +116,131 @@ const fall = [
   ["Yam", "yes", "6", "3", "300", "55"]
 ];
 
+const fishData = [
+  { name: "Fat Greeling", seasons: ["All Year"], location: "Ocean", level: 3, size: "40 cm", caught: false },
+  { name: "Horse Mackerel", seasons: ["All Year"], location: "Ocean", level: 3, size: "40 cm", caught: false },
+  { name: "Amur Minnow", seasons: ["All Year"], location: "Lake, Bridge, Pond", level: 1, size: "15 cm", caught: false },
+  { name: "Masu Trout", seasons: ["All Year"], location: "Lake, Bridge, Pond", level: 1, size: "25 cm", caught: false },
+  { name: "Chicken Grunt", seasons: ["All Year"], location: "Ocean", level: 3, size: "40 cm", caught: false },
+  { name: "Sardine", seasons: ["All Year"], location: "Ocean", level: 1, size: "25 cm", caught: false },
+  { name: "Char", seasons: ["Spring", "Summer", "Fall"], location: "Bridge, Pond", level: 4, size: "50 cm", caught: false },
+  { name: "Dace", seasons: ["All Year"], location: "Waterfall, Stream, Pond", level: 2, size: "35 cm", caught: false },
+  { name: "Eel", seasons: ["All Year"], location: "Stream / Ocean*", level: 5, size: "100 cm", caught: false },
+  { name: "Pale Chub", seasons: ["All Year"], location: "Stream", level: 1, size: "15 cm", caught: false },
+  { name: "Bonito", seasons: ["Spring", "Summer", "Fall"], location: "Ocean", level: 5, size: "90 cm", caught: false },
+  { name: "Flounder", seasons: ["All Year"], location: "Ocean", level: 4, size: "60 cm", caught: false },
+  { name: "Thread-sail Filefish", seasons: ["Spring", "Fall", "Winter"], location: "Ocean", level: 2, size: "30 cm", caught: false },
+  { name: "Goldfish", seasons: ["All Year"], location: "Waterfall, Stream", level: 1, size: "20 cm", caught: false },
+  { name: "Crucian Carp", seasons: ["All Year"], location: "Waterfall, Stream", level: 2, size: "30 cm", caught: false },
+  { name: "Longtooth Grouper", seasons: ["Spring", "Fall", "Winter"], location: "Ocean", level: 4, size: "70 cm", caught: false },
+  { name: "Bighead Carp", seasons: ["All Year"], location: "Lake, Stream", level: 5, size: "100 cm", caught: false },
+  { name: "Salmon", seasons: ["Summer", "Autumn"], location: "Stream", level: 4, size: "70 cm", caught: false },
+  { name: "Mackerel", seasons: ["All Year"], location: "Ocean", level: 4, size: "50 cm", caught: false },
+  { name: "Needlefish", seasons: ["Spring", "Summer", "Fall"], location: "Ocean", level: 3, size: "40 cm", caught: false },
+  { name: "Seerfish", seasons: ["Spring", "Summer", "Winter"], location: "Ocean", level: 5, size: "100 cm", caught: false },
+  { name: "Pike", seasons: ["Autumn"], location: "Ocean", level: 3, size: "40 cm", caught: false },
+  { name: "Mahi-mahi", seasons: ["Spring", "Summer", "Fall"], location: "Ocean", level: 5, size: "180 cm", caught: false },
+  { name: "Sea Bream", seasons: ["All Year"], location: "Ocean", level: 5, size: "100 cm", caught: false },
+  { name: "Cod", seasons: ["Spring", "Winter"], location: "Ocean", level: 4, size: "50 cm", caught: false },
+  { name: "Loach", seasons: ["Spring", "Summer", "Fall"], location: "Stream, Pond", level: 1, size: "12 cm", caught: false },
+  { name: "Dark Sleeper", seasons: ["All Year"], location: "Stream, Pond", level: 1, size: "25 cm", caught: false },
+  { name: "Rainbow Trout", seasons: ["All Year"], location: "Lake, Bridge, Lake Mine", level: 5, size: "100 cm", caught: false },
+  { name: "Pacific Herring", seasons: ["All Year"], location: "Ocean", level: 1, size: "30 cm", caught: false },
+  { name: "Silver Carp", seasons: ["All Year"], location: "Stream, Pond", level: 5, size: "100 cm", caught: false },
+  { name: "Sailfin Sandfish", seasons: ["Spring", "Fall", "Winter"], location: "Ocean", level: 1, size: "20 cm", caught: false },
+  { name: "Halibut", seasons: ["All Year"], location: "Ocean", level: 5, size: "80 cm", caught: false },
+  { name: "Blowfish", seasons: ["Spring", "Winter"], location: "Ocean", level: 4, size: "50 cm", caught: false },
+  { name: "Black Bass", seasons: ["All Year"], location: "Everywhere but Ocean", level: 4, size: "50 cm", caught: false },
+  { name: "Yellowtail", seasons: ["Spring", "Winter"], location: "Ocean", level: 5, size: "100 cm", caught: false },
+  { name: "Bluegill", seasons: ["All Year"], location: "Everywhere but Ocean", level: 1, size: "25 cm", caught: false },
+  { name: "Crucian Carp", seasons: ["All Year"], location: "Lake, Waterfall", level: 4, size: "50 cm", caught: false },
+  { name: "Atka Mackerel", seasons: ["Spring", "Fall", "Winter"], location: "Ocean", level: 3, size: "40 cm", caught: false },
+  { name: "Tuna", seasons: ["All Year"], location: "Ocean", level: 5, size: "250 cm", caught: false },
+  { name: "Ocean Sunfish", seasons: ["Spring", "Summer", "Fall"], location: "Ocean", level: 5, size: "250 cm", caught: false },
+  { name: "Luna Lionfish", seasons: ["All Year"], location: "Ocean", level: 2, size: "30 cm", caught: false },
+  { name: "Red Seaperch", seasons: ["Spring", "Summer", "Fall"], location: "Ocean", level: 2, size: "30 cm", caught: false },
+  { name: "Cherry Salmon", seasons: ["All Year"], location: "Bridge", level: 2, size: "30 cm", caught: false },
+  { name: "Blotched Snakehead", seasons: ["Spring", "Summer", "Fall"], location: "Waterfall, Stream, Pond", level: 5, size: "80 cm", caught: false },
+  { name: "Smelt", seasons: ["Spring", "Fall", "Winter"], location: "Waterfall, Stream, Pond", level: 1, size: "15 cm", caught: false },
+  { name: "Beltfish", seasons: ["Summer", "Autumn"], location: "Ocean", level: 5, size: "200 cm", caught: false },
+  { name: "Sweetfish", seasons: ["Summer", "Autumn"], location: "Bridge, Stream", level: 3, size: "30 cm", caught: false },
+  { name: "Sand Smelt", seasons: ["Spring", "Summer"], location: "Stream, Ocean", level: 3, size: "30 cm", caught: false },
+  { name: "Pike Conger", seasons: ["Summer", "Autumn"], location: "Ocean", level: 5, size: "150 cm", caught: false },
+  { name: "Flying Fish", seasons: ["Summer", "Autumn"], location: "Ocean", level: 2, size: "30 cm", caught: false },
+
+  {
+    name: "Huchen",
+    seasons: ["Spring", "Summer", "Autumn"],
+    location: "Stream",
+    requirements: "Know the Grilled Fish, Sashimi, and Sushi cooking recipes",
+    caught: false,
+    level: "-",
+    size: "-",
+  },
+
+  {
+    name: "Anglerfish",
+    seasons: ["Spring", "Winter"],
+    location: "Ocean",
+    requirements: "Go fishing between 8:00 pm and 8:00 am",
+    caught: false,
+    level: "-",
+    size: "-",
+  },
+
+  {
+    name: "Hot Spring Catfish",
+    seasons: ["Winter"],
+    location: "Hot Spring",
+    requirements: "(No additional requirements)",
+    caught: false,
+    level: "-",
+    size: "-",
+  },
+
+  {
+    name: "Carp",
+    seasons: ["Spring", "Summer", "Autumn"],
+    location: "Lake",
+    requirements: "Ship at least 200 fish",
+    caught: false,
+    level: "-",
+    size: "-",
+  },
+
+  {
+    name: "Coelacanth",
+    seasons: ["All Year"],
+    location: "Level 9 of the Lake Mine",
+    requirements: "Catch 5 or more Guardian fish",
+    caught: false,
+    level: "-",
+    size: "-",
+  },
+
+  {
+    name: "Squid",
+    seasons: ["Spring", "Winter"],
+    location: "Ocean",
+    requirements: "Go fishing between 9:00 am and 12:00 am (midnight)",
+    caught: false,
+    level: "-",
+    size: "-",
+  },
+
+  {
+    name: "Arapaima Gigas",
+    seasons: ["Summer"],
+    location: "Pond",
+    requirements: "Catch at least 50 species of fish",
+    caught: false,
+    level: "-",
+    size: "-",
+  }
+];
+
+
+
 // Fungsi untuk render daftar crops berdasarkan musim
 function showCrops(season) {
   const listEl = document.getElementById("cropsList");
@@ -155,21 +280,24 @@ document.getElementById("cropsSeasonFilter").addEventListener("change", (e) => {
 
 // Integrasi showSection supaya navbar bisa switch antar halaman
 function showSection(section) {
-  const birthdaySection = document.querySelector(".container");
-  const cropsSection = document.getElementById("cropsSection");
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(sec => {
+    sec.style.display = "none";
+  });
 
   if (section === "birthday") {
-    birthdaySection.style.display = "block";
-    cropsSection.style.display = "none";
+    document.getElementById("birthday").style.display = "block";
   } else if (section === "crops") {
-    birthdaySection.style.display = "none";
-    cropsSection.style.display = "block";
+    document.getElementById("cropsSection").style.display = "block";
     const season = document.getElementById("cropsSeasonFilter").value;
     showCrops(season);
     showHarvestSchedule(season);
+  } else if (section === "fish") {
+    document.getElementById("fishSection").style.display = "block";
+    showFishList();
   }
-
 }
+
 
 document.getElementById("cropsSeasonFilter").addEventListener("change", (e) => {
   const season = e.target.value;
@@ -267,5 +395,95 @@ function showHarvestSchedule(season) {
   }
 }
 
+function showFishList() {
+  const fishList = document.getElementById("fishList");
+  fishList.innerHTML = "";
 
+  // Tampilkan semua ikan tanpa filter
+  const allFish = fishData; 
 
+  if (allFish.length === 0) {
+    fishList.innerHTML = "<li>Tidak ditemukan ikan 😢</li>";
+    return;
+  }
+
+  allFish.forEach((f, index) => {
+    const li = document.createElement("li");
+    li.classList.add("fish-item");
+    li.dataset.index = index;
+    li.innerHTML = `
+      <input type="checkbox" ${f.caught ? "checked" : ""}>
+      <strong>${f.name}</strong>
+      <small>🗓️ Musim: ${f.seasons.join(", ")}</small>
+      <small>📍 Lokasi: ${f.location}</small>
+      ${f.level !== "-" ? `<small>🎣 Level Min: ${f.level}</small>` : ""}
+      ${f.size !== "-" ? `<small>📏 Ukuran Maks: ${f.size}</small>` : ""}
+      ${f.requirements ? `<small>📌 Syarat: ${f.requirements}</small>` : ""}
+    `;
+
+    li.addEventListener("click", function (e) {
+      if (e.target.tagName.toLowerCase() === "input") return;
+      const checkbox = this.querySelector("input[type='checkbox']");
+      checkbox.checked = !checkbox.checked;
+      const idx = parseInt(this.dataset.index);
+      fishData[idx].caught = checkbox.checked;
+    });
+
+    const checkbox = li.querySelector("input[type='checkbox']");
+    checkbox.addEventListener("click", function (e) {
+      const idx = parseInt(li.dataset.index);
+      fishData[idx].caught = this.checked;
+      e.stopPropagation();
+    });
+
+    fishList.appendChild(li);
+  });
+}
+
+function toggleCaught(index) {
+  fishData[index].caught = !fishData[index].caught;
+}
+
+function showUncaughtFish() {
+  const uncaughtList = document.getElementById("uncaughtFishList");
+  uncaughtList.innerHTML = "";
+
+  const uncaught = fishData.filter(f => !f.caught);
+
+  // Cari elemen info dulu (kalau ada)
+  let info = document.getElementById("uncaughtInfo");
+
+  if (uncaught.length === 0) {
+    uncaughtList.innerHTML = "<li>🎉 Kamu sudah menangkap semua ikan! Hebat! 🎣</li>";
+    // Kalau info ada, hapus supaya gak tampil
+    if (info) {
+      info.remove();
+    }
+    return;
+  }
+
+  // Kalau info belum ada, buat baru
+  if (!info) {
+    info = document.createElement("p");
+    info.id = "uncaughtInfo";
+    uncaughtList.parentNode.insertBefore(info, uncaughtList);
+  }
+
+  info.textContent = `Jumlah ikan belum tertangkap: ${uncaught.length}`;
+
+uncaught.forEach(f => {
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <strong>${f.name}</strong>
+    <small>🗓️ Musim: ${f.seasons.join(", ")}</small>
+    <small>📍 Lokasi: ${f.location}</small>
+    ${f.level !== "-" ? `<small>🎣 Level Min: ${f.level}</small>` : ""}
+    ${f.size !== "-" ? `<small>📏 Ukuran Maks: ${f.size}</small>` : ""}
+    ${f.requirements ? `<small>📌 Syarat: ${f.requirements}</small>` : ""}
+  `;
+  uncaughtList.appendChild(li);
+});
+
+}
+
+showFishList();

@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f0f8ff, #a1c4fd);
+  background: linear-gradient(135deg, #9fb0c0, #5a739c);
   margin: 0;
   padding: 0;
 }
@@ -42,7 +42,7 @@ nav button:hover {
   max-width: 520px;
   margin: 40px auto;
   padding: 30px 25px;
-  background: white;
+  background: rgb(191, 196, 224);
   border-radius: 20px;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -61,7 +61,7 @@ label {
   text-align: left;
 }
 
-select, input[type="text"] {
+select, input[type="text"], button[id="showUncaughtFish"] {
   width: 100%;
   padding: 12px 15px;
   margin-bottom: 20px;
@@ -110,3 +110,16 @@ li small {
   font-style: italic;
   font-size: 14px;
 }
+
+  .fish-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .fish-item:hover {
+    background-color: #f0f0f0;
+  }
