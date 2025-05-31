@@ -1,8 +1,3 @@
-window.onload = function() {
-  window.scrollTo(0, 0);
-};
-
-
 const characters = [
   { name: "Plum", birthday: "Spring 4", gift: "Wheat Flour" },
   { name: "Harvest Goddess", birthday: "Spring 8", gift: "Egg" },
@@ -186,6 +181,12 @@ document.getElementById("cropsSeasonFilter").addEventListener("change", (e) => {
 // Panggil showSection awal supaya tampil halaman birthday & gift dulu
 showSection("birthday");
 
+document.getElementById("tgl").addEventListener("change", () => {
+  const season = document.getElementById("cropsSeasonFilter").value;
+  showHarvestSchedule(season); // render ulang jadwal sesuai tgl baru
+});
+
+
 // Fungsi generate jadwal panen 30 hari
 function generateHarvestSchedule(crops, startDate = 1, totalDays = 30) {
   const schedule = {};
@@ -221,6 +222,8 @@ function showHarvestSchedule(season) {
   const scheduleTable = document.getElementById("harvestSchedule");
   scheduleTable.innerHTML = "";
 
+  const startDate = parseInt(document.getElementById("tgl").value);
+
   let cropsData;
   if (season === "spring") cropsData = spring;
   else if (season === "summer") cropsData = summer;
@@ -232,9 +235,8 @@ function showHarvestSchedule(season) {
     return;
   }
 
-  const schedule = generateHarvestSchedule(cropsData, 1, 30);
+  const schedule = generateHarvestSchedule(cropsData, startDate, 30);
 
-  // Buat header tabel
   const headerRow = document.createElement("tr");
   const dayHeader = document.createElement("th");
   dayHeader.textContent = "Hari";
@@ -244,9 +246,8 @@ function showHarvestSchedule(season) {
   headerRow.appendChild(activityHeader);
   scheduleTable.appendChild(headerRow);
 
-  // Buat baris data
   for (let day = 1; day <= 30; day++) {
-    const activities = schedule[day];
+    const activities = schedule[day] || [];
     const row = document.createElement("tr");
 
     const dayCell = document.createElement("td");
@@ -257,7 +258,7 @@ function showHarvestSchedule(season) {
       activityCell.textContent = activities.join(", ");
     } else {
       activityCell.textContent = "-";
-      activityCell.style.color = "#777"; // buat beda warna kalau kosong
+      activityCell.style.color = "#777";
     }
 
     row.appendChild(dayCell);
@@ -265,5 +266,6 @@ function showHarvestSchedule(season) {
     scheduleTable.appendChild(row);
   }
 }
+
 
 
