@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoS Helper - Ulang Tahun & Hadiah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <button onclick="showSection('birthday')">🎁 Birthday & Gift</button>
+    <button onclick="showSection('crops')">🌾 Crops</button>
+  </nav>
+
+  <div id="birthday" class="container section active">
+    <h1>🎂 Daftar Ulang Tahun & Hadiah Warga</h1>
+
+    <label for="seasonFilter">Filter Musim:</label>
+    <select id="seasonFilter">
+      <option value="all">Semua</option>
+      <option value="Spring">Spring</option>
+      <option value="Summer">Summer</option>
+      <option value="Fall">Fall</option>
+      <option value="Winter">Winter</option>
+    </select>
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Cari nama karakter..."
+      autocomplete="off"
+    />
+    <ul id="birthdayList"></ul>
+  </div>
+
+<div id="cropsSection" class="container section" style="display:none;">
+  <h1>🌾 Daftar Tanaman</h1>
+
+  <label for="cropsSeasonFilter">Pilih Musim:</label>
+  <select id="cropsSeasonFilter">
+    <option value="spring">Spring</option>
+    <option value="summer">Summer</option>
+    <option value="fall">Fall</option>
+  </select>
+
+  <ul id="cropsList"></ul>
+  <h3>Jadwal Panen 30 Hari</h3>
+  <table id="harvestSchedule" border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px;">
+    <!-- Jadwal panen akan dirender di sini -->
+  </table>
+
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
