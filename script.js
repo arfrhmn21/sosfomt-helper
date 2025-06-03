@@ -108,7 +108,7 @@ const summer = [
 ];
 
 const fall = [
-  ["Adzuki Bean", "yes", "10", "4", "300", "80"],
+  ["Adzuki Bean", "yes", "9", "4", "300", "80"],
   ["Carrot", "no", "7", "0", "300", "120"],
   ["Chili Pepper", "yes", "13", "5", "300", "100"],
   ["Eggplant", "yes", "9", "3", "120", "60"],
